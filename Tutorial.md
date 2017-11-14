@@ -27,7 +27,7 @@ To install the python packages needed for the inferelator, run:
 pip install -r requirements.txt
 ```
 
-If you do not have R install, you can download it from https://www.r-project.org/
+If you do not have R installed, you can download it from https://www.r-project.org/
 
 To install the required R packages, run:
 ```
