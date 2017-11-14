@@ -70,7 +70,8 @@ class ResultsProcessor:
         plt.plot(recall, precision)
         plt.xlabel('recall')
         plt.ylabel('precision')
-        plt.annotate("aupr = " + aupr.astype("string"), xy=(0.4, 0.05), xycoords='axes fraction')
+        # Commenting out plt.annotate line that breaks in python 3.6: TypeError: data type "string" not understood
+        #plt.annotate("aupr = " + aupr.astype("string"), xy=(0.4, 0.05), xycoords='axes fraction')
         plt.savefig(os.path.join(output_dir, 'pr_curve.pdf'))
         plt.close()
 
