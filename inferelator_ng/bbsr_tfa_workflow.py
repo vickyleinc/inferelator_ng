@@ -5,7 +5,6 @@ Run BSubtilis Network Inference with TFA BBSR.
 import numpy as np
 import os
 from workflow import WorkflowBase
-import design_response_R
 import design_response_translation #added python design_response
 from tfa import TFA
 from results_processor import ResultsProcessor
@@ -23,7 +22,6 @@ class BBSR_TFA_Workflow(WorkflowBase):
 
         self.mi_clr_driver = mi_R.MIDriver()
         self.regression_driver = bbsr_R.BBSR_driver()
-        #self.design_response_driver = design_response_R.DRDriver()
         self.design_response_driver = design_response_translation.PythonDRDriver() #this is the python switch
         self.get_data()
         self.compute_common_data()
